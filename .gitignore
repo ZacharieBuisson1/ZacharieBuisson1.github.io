@@ -1,5 +1,10 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# Quarto
+/.quarto/
+/_site/
+/_freeze/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store

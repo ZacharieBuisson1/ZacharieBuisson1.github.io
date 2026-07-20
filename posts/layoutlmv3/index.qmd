@@ -1,4 +1,13 @@
-### Introduction - Use Cases
+---
+title: "Understanding LayoutLMv3"
+description: "How LayoutLMv3 unifies text and image masking for document AI: the intuition behind MLM, MIM, and Word-Patch Alignment, with a worked invoice fine-tuning example."
+date: 2023-02-24
+author: "Zacharie Buisson"
+categories: [Document AI, Deep Learning, NLP]
+image: images/layoutlmv3.png
+---
+
+### Introduction — Use Cases
 
 Document AI is one of the hottest areas in AI for businesses. Indeed, it goes without saying that automating low-value tasks is mandatory to reduce costs and improve operational performance. However, AI and such a model are not so easy to create, especially when it comes to a lot of different tasks.
 
@@ -8,7 +17,7 @@ One of these topics is document AI. It aims to automatically find information in
 
 Also, Microsoft has develop Self-supervised pre-training techniques to solve this use case. The model we are going to describe and implement in the following document is **LayoutLMv3**.
 
-### LayoutLMv3 : Theorical description
+### LayoutLMv3: a theoretical description
 
 #### Conceptual approach
 
@@ -32,11 +41,7 @@ One of the most popular models using masked language modeling is BERT<sup>[1](ht
 
 The following example may give an idea of how this transformer works.
 
-<p align="center">
-    <img src="../_ressources/images/MLM_BERT.png">
-<p>
-
-*An example of MLM. Taken from : [Self-Supervised Contextual Data Augmentation for Natural Language Processing](https://www.researchgate.net/publication/337187647_Self-Supervised_Contextual_Data_Augmentation_for_Natural_Language_Processing)*
+![An example of MLM. Taken from [*Self-Supervised Contextual Data Augmentation for Natural Language Processing*](https://www.researchgate.net/publication/337187647_Self-Supervised_Contextual_Data_Augmentation_for_Natural_Language_Processing).](images/mlm_bert.png)
 
 How to Train a Masked Language Model (such as BERT)
 
@@ -60,11 +65,7 @@ Nevertheless, this kind of algorithms is quite more complicated than MLM. Indeed
 
 One of the pioneering work models using Masked Image Modeling is BEIT<sup>[2](https://arxiv.org/pdf/2106.08254.pdf)</sup>   (Bidirectional Encoder Representations from Transformers).
 
-<p align="center">
-    <img src="../_ressources/images/MIM_BEIT.png">
-<p>
-
-*An example of MIM using BEiT. Taken from : [BEIT: BERT Pre-Training of Image Transformers](https://arxiv.org/pdf/2106.08254.pdf)*
+![An example of MIM using BEiT. Taken from [*BEiT: BERT Pre-Training of Image Transformers*](https://arxiv.org/pdf/2106.08254.pdf).](images/mim_beit.png)
 
 How to Train a Masked Image Model (such as BEiT)
 
@@ -89,15 +90,11 @@ Word vectors and image patch features are aligned using a cross-modal attention 
 
 ##### Aggregation of 3 techniques in LayoutLMv3
 
-LayoutMLv3 is a mix of these three techniques. The link between them is described in the image below.
+LayoutLMv3 is a mix of these three techniques. The link between them is described in the image below.
 
-<p align="center">
-    <img src="../_ressources/images/LayoutLMv3.png">
-<p>
+![Summary of LayoutLMv3. Taken from [*LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking*](https://arxiv.org/pdf/2204.08387.pdf).](images/layoutlmv3.png)
 
-*Summary of LayoutLMv3. Taken from : [LayoutLMv3: Pre-training for Document AIwith Unified Text and Image Masking](https://arxiv.org/pdf/2204.08387.pdf)*
-
-### Strenghts of LayoutLMv3
+### Strengths of LayoutLMv3
 
 **A Cross-Modal Approach**
 
@@ -183,7 +180,7 @@ The example discussed above has certain limitations that need to be considered:
 * The quality of information extracted by the model is highly dependent on the quality of OCR. Even if the model performs well in terms of labeling (as shown in the table), incorrect information can be extracted if the OCR is not accurate enough. For instance, if the date of the invoice is 14/01/2023 and the OCR extracted 44/01/2023, labeling might be great, but information false. To address this issue, the model should be combined with a set of rules to verify and normalize the extracted information ;
 * Fine-tuning this kind of model requires labeled data, which can be a time-consuming and challenging task. Without labeled data, it is impossible to train the model effectively.
 
-## Sources
+### Sources
 
 **LayoutLMv3**
 * https://huggingface.co/docs/transformers/model_doc/layoutlmv3
