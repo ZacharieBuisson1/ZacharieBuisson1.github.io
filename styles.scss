@@ -1,0 +1,36 @@
+/*-- scss:defaults --*/
+
+// A slightly warmer, more readable content column.
+$font-size-root: 17px;
+$body-color: #24292f;
+$link-color: #0969da;
+
+/*-- scss:rules --*/
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+// Center figures and cap their width so screenshots don't blow out the column.
+.quarto-figure img,
+p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+// Give blockquotes a clearer accent.
+blockquote {
+  border-left: 4px solid $link-color;
+  padding-left: 1rem;
+  color: inherit;
+  opacity: 0.9;
+}
+
+// Tidy up the listing cards on the home page.
+.quarto-listing {
+  margin-top: 1.5rem;
+}

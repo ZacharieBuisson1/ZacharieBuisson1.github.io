@@ -1,0 +1,24 @@
+---
+title: "About"
+about:
+  template: trestles
+  image-shape: round
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/ZacharieBuisson1
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/zacharie-buisson/
+    - icon: envelope
+      text: Email
+      href: mailto:zacharie.buisson@orange.fr
+---
+
+I'm Zacharie Buisson, a data scientist interested in machine learning and
+document AI. This blog is where I write up things I've been reading, building,
+or fine-tuning — mostly around NLP, computer vision, and applied deep learning.
+
+The posts here are informal working notes: model walkthroughs, small
+experiments, and the occasional deep dive into a paper I found worth explaining
+in my own words.

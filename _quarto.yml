@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Zacharie Buisson"
+  description: "Notes on machine learning, document AI, and data science."
+  site-url: https://zachariebuisson1.github.io
+  open-graph: true
+  twitter-card: true
+  navbar:
+    right:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - icon: github
+        href: https://github.com/ZacharieBuisson1
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/zacharie-buisson/
+        aria-label: LinkedIn
+      - icon: rss
+        href: index.xml
+        aria-label: RSS
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+      dark: [darkly, styles.scss]
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    smooth-scroll: true
+    anchor-sections: true

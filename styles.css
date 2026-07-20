@@ -1,0 +1,9 @@
+/* Extra CSS layered on top of the SCSS theme.
+   Kept minimal — most styling lives in styles.scss. */
+
+.figure-caption,
+figcaption {
+  font-size: 0.85em;
+  opacity: 0.75;
+  text-align: center;
+}
